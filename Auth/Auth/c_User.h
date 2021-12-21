@@ -15,7 +15,10 @@ private:
 public:
 	c_User()
 	{
-
+		strcpy_s((char*)this->name.c_str(), 5, "Null");
+		strcpy_s((char*)this->fname.c_str(), 5, "Null");
+		this->age = -1;
+		this->id = 0;
 	}
 
 	c_User(string name, string fname, int age)
@@ -45,9 +48,6 @@ public:
 	long getId() {
 		return this->id;
 	}
-	void setId(long id) {
-		this->id = id;
-	}
 
 
 	int getAge() {
@@ -57,7 +57,10 @@ public:
 		this->age = age;
 	}
 
-
+	friend ostream& operator<<(ostream& out, const c_User &user) {
+		out << "\n" << user.id << ": " << user.name << "\t" << user.fname << "\tAge: " << user.age;
+		return out;
+	}
 
 };
 
