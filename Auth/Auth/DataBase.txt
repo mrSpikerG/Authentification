@@ -1,0 +1,6 @@
+2
+0 12
+Vasya
+test11 999
+Petya
+test2

@@ -7,26 +7,37 @@ class c_User
 {
 
 private:
-	string name;
-	string fname;
+	string name = " ";
+	string fname = " ";
 	int age;
 	long id;
 
 public:
 	c_User()
 	{
-		strcpy_s((char*)this->name.c_str(), 5, "Null");
+	/*	strcpy_s((char*)this->name.c_str(), 5, "Null");
 		strcpy_s((char*)this->fname.c_str(), 5, "Null");
 		this->age = -1;
+		this->id = 0;*/
+	}
+
+	c_User(c_User& us)
+	{
+		
+		strcpy_s((char*)this->name.c_str(), strlen(us.name.c_str())+1, us.name.c_str());
+		strcpy_s((char*)this->fname.c_str(), strlen(us.fname.c_str())+1, us.fname.c_str());
+		this->age = us.age;
 		this->id = 0;
 	}
 
-	c_User(string name, string fname, int age)
+	c_User(string name, string fname, int age,int id)
 	{
-		strcpy_s((char*)this->name.c_str(), strlen(name.c_str()) + 1, name.c_str());
-		strcpy_s((char*)this->fname.c_str(), strlen(fname.c_str()) + 1, fname.c_str());
+		this->name = name;
+		this->fname = fname;
+		//strcpy_s((char*)this->name.c_str(), strlen(name.c_str()) + 1, name.c_str());
+		//strcpy_s((char*)this->fname.c_str(), strlen(fname.c_str()) + 1, fname.c_str());
 		this->age = age;
-		this->id = 0;
+		this->id = id;
 	}
 
 	string getName() {

@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Auth", "Auth\Auth.vcxproj", "{41E682B2-C531-4A3B-ACCC-2B4CB7AA7D93}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Auth(login)", "Auth(login)\Auth(login).vcxproj", "{2F3FC1F0-0703-44CB-9DA2-88EFB98B5C60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -21,6 +23,14 @@ Global
 		{41E682B2-C531-4A3B-ACCC-2B4CB7AA7D93}.Release|x64.Build.0 = Release|x64
 		{41E682B2-C531-4A3B-ACCC-2B4CB7AA7D93}.Release|x86.ActiveCfg = Release|Win32
 		{41E682B2-C531-4A3B-ACCC-2B4CB7AA7D93}.Release|x86.Build.0 = Release|Win32
+		{2F3FC1F0-0703-44CB-9DA2-88EFB98B5C60}.Debug|x64.ActiveCfg = Debug|x64
+		{2F3FC1F0-0703-44CB-9DA2-88EFB98B5C60}.Debug|x64.Build.0 = Debug|x64
+		{2F3FC1F0-0703-44CB-9DA2-88EFB98B5C60}.Debug|x86.ActiveCfg = Debug|Win32
+		{2F3FC1F0-0703-44CB-9DA2-88EFB98B5C60}.Debug|x86.Build.0 = Debug|Win32
+		{2F3FC1F0-0703-44CB-9DA2-88EFB98B5C60}.Release|x64.ActiveCfg = Release|x64
+		{2F3FC1F0-0703-44CB-9DA2-88EFB98B5C60}.Release|x64.Build.0 = Release|x64
+		{2F3FC1F0-0703-44CB-9DA2-88EFB98B5C60}.Release|x86.ActiveCfg = Release|Win32
+		{2F3FC1F0-0703-44CB-9DA2-88EFB98B5C60}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
