@@ -15,15 +15,15 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Auth\c_User.h">
+    <ClInclude Include="..\Auth\c_UsersDB%28server%29.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="..\Auth\c_UsersDB.h">
+    <ClInclude Include="..\Auth\c_User%28server%29.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="System.cpp">
+    <ClCompile Include="System%28server%29.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

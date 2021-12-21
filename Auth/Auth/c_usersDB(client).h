@@ -1,5 +1,5 @@
 #pragma once
-#include "c_User.h"
+#include "c_User(client).h"
 class c_UsersDB
 {
 private:
@@ -51,13 +51,13 @@ public:
 
 		if (pf) {
 
-			fprintf(pf, "%i", size);
+			fprintf(pf, "%i", this->size);
 
-			for (int i = 0; i < size; i++) {
+			for (int i = 0; i < this->size; i++) {
 
 				fprintf(pf, "\n%i %i\n", this->users[i].getId(), this->users[i].getAge());
 				fputs(this->users[i].getName().c_str(), pf);
-				fprintf(pf,"\n");
+				fprintf(pf, "\n");
 				fputs(this->users[i].getFname().c_str(), pf);
 			}
 
