@@ -3,5 +3,10 @@
 using namespace std;
 
 int main() {
+	
+	c_UsersDB* MYDB = new c_UsersDB();
 
+	MYDB->load();
+
+	cout << *MYDB;
 }

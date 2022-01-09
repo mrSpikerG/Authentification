@@ -1,0 +1,7 @@
+2
+0 14
+Vasya
+Petrov
+1 17
+Petya
+DFG

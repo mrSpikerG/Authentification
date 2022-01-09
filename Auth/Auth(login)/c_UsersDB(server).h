@@ -5,6 +5,14 @@ class c_UsersDB
 private:
 	c_User* users;
 	size_t size;
+
+	void deleteEndL(char* text) {
+		for (int i = 0; i < strlen(text); i++) {
+			if (text[i] == '\n') {
+				text[i] = '\0';
+			}
+		}
+	}
 public:
 
 	c_UsersDB()
@@ -55,26 +63,29 @@ public:
 
 		if (pf) {
 
-			fscanf_s(pf, "%i", &this->size);
-
-			for (int i = 0; i < this->size; i++) {
-
-				int id,age;
+			int tempsize;
+			fscanf_s(pf, "%i", &tempsize);
+			for (int i = 0; i < tempsize; i++) {
+				int id;
+				int age;
 				string name, fname;
-				fscanf_s(pf, "\n%i %i\n", id, age);
+				fscanf_s(pf, "\n%i %i\n", &id, &age);
+				
 				fgets((char*)name.c_str(), 256, pf);
-				fscanf_s(pf,"\n");
+				deleteEndL((char*)name.c_str());
+
+				fscanf_s(pf, "\n");
+				
 				fgets((char*)fname.c_str(), 256, pf);
+				deleteEndL((char*)fname.c_str());
+				
+				add(name, fname, age);
 			}
-
-
 		}
 		else {
 			cout << "\nNullPointerException: save";
 		}
 		fclose(pf);
 	}
-
-
 };
 
