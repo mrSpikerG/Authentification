@@ -4,34 +4,32 @@ using namespace std;
 
 int main() {
 
-
-	setlocale(LC_ALL, "");
 	c_UsersDB* MYDB = new c_UsersDB();
 
 
 
 
 	string name;
-	cout << "Ââåäèòå èìÿ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ: ";
 	getline(cin, name);
 
 	string fname;
-	cout << "Ââåäèòå ôàìèëèþ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ„Ð°Ð¼Ð¸Ð»Ð¸ÑŽ: ";
 	getline(cin, fname);
 
 	int age;
-	cout << "Ââåäèòå âîçðàñò: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ð¾Ð·Ñ€Ð°ÑÑ‚: ";
 	cin >> age;
 	cin.ignore();
 	MYDB->add(name, fname, age);
 
-	cout << "Ââåäèòå èìÿ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð¸Ð¼Ñ: ";
 	getline(cin, name);
 
-	cout << "Ââåäèòå ôàìèëèþ: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ„Ð°Ð¼Ð¸Ð»Ð¸ÑŽ: ";
 	getline(cin, fname);
 
-	cout << "Ââåäèòå âîçðàñò: ";
+	cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ð²Ð¾Ð·Ñ€Ð°ÑÑ‚: ";
 	cin >> age;
 	cin.ignore();
 
