@@ -6,9 +6,6 @@ int main() {
 
 	c_UsersDB* MYDB = new c_UsersDB();
 
-
-
-
 	string name;
 	cout << "Введите имя: ";
 	getline(cin, name);

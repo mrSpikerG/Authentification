@@ -23,6 +23,10 @@ public:
 		return out;
 	}
 
+	c_User getById(int id) {
+		return users[id];
+	}
+
 	void add(string name, string fname, int age) {
 		c_User* TEMP = new c_User[size + 1];
 
