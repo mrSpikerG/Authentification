@@ -56,6 +56,37 @@ public:
 		this->size++;
 	}
 
+	void removeById(int id) {
+		if (id > this->size || id < 0) {
+			return;
+		}
+
+		int j = 0;
+		c_User* TEMP = new c_User[size + 1];
+		for (int i = 0; i < size; i++) {
+			if (i != id) {
+				TEMP[j] = users[i];
+				TEMP[j].setId(j);
+				j++;
+			}
+		}
+		delete[] users;
+		this->users = TEMP;
+		size--;
+	}
+
+	void removeByUser(c_User human) {
+		for (int i = 0; i < size; i++) {
+			if (_stricmp(users[i].getName().c_str(), human.getName().c_str()) == 0
+				&& _stricmp(users[i].getFname().c_str(), human.getFname().c_str()) == 0
+				&& users[i].getAge() == human.getAge()) {
+
+				removeById(i);
+
+			}
+		}
+	}
+
 	void load() {
 
 		FILE* pf;
@@ -70,15 +101,15 @@ public:
 				int age;
 				string name, fname;
 				fscanf_s(pf, "\n%i %i\n", &id, &age);
-				
+
 				fgets((char*)name.c_str(), 256, pf);
 				deleteEndL((char*)name.c_str());
 
 				fscanf_s(pf, "\n");
-				
+
 				fgets((char*)fname.c_str(), 256, pf);
 				deleteEndL((char*)fname.c_str());
-				
+
 				add(name, fname, age);
 			}
 		}

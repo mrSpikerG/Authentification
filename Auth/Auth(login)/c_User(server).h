@@ -57,7 +57,9 @@ public:
 		strcpy_s((char*)this->fname.c_str(), strlen(fname.c_str()) + 1, fname.c_str());
 	}
 
-
+	void setId(int id) {
+		this->id = id;
+	}
 	long getId() {
 		return this->id;
 	}
